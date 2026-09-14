@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "TDeck — Your X, in focus",
+  "version": "0.1.0",
+  "description": "A focused multi-column workspace for X searches, accounts, and lists. Uses your existing X session; stores your deck locally.",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage", "alarms", "tabGroups"],
+  "host_permissions": ["https://x.com/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "Open TDeck", "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" } },
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_scripts": [{
+    "matches": ["https://x.com/search*", "https://x.com/i/lists/*", "https://x.com/home*", "https://x.com/*/lists*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "commands": { "open-deck": { "suggested_key": { "default": "Alt+Shift+D", "mac": "Alt+Shift+D" }, "description": "Open TDeck" } },
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; img-src 'self' https://pbs.twimg.com data:; style-src 'self' 'unsafe-inline'; connect-src 'none';" }
+}
