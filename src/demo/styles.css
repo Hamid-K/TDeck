@@ -1,0 +1,15 @@
+.demo-document .app { height: calc(100dvh - 33px); margin-top: 33px; }
+.demo-badge { position: fixed; inset: 0 0 auto; height: 33px; z-index: 250; display: flex; align-items: center; justify-content: center; gap: 8px; font: 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: .12px; background: #1d2825; color: #afc4ba; border-bottom: 1px solid #405349; }
+.demo-badge strong { color: #d8f1e5; font-weight: 600; }
+.demo-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #a4e8cc; margin-right: 2px; }
+.demo-document .workspace-health { display: none; }
+.demo-document .feed-status { font-size: 0; }
+.demo-document .feed-status::after { content: 'Fictional feed'; font-size: 9px; }
+.demo-document .connect-button { display: none; }
+.demo-document .column-query[title='fictional-curiosity-list'] { font-size: 0; }
+.demo-document .column-query[title='fictional-curiosity-list']::after { content: 'A little room for discovery'; font-size: 9px; }
+.demo-document .column-footer > span { font-size: 0; }
+.demo-document .column-footer > span::after { content: 'Illustrative content · Offline demo'; font-size: 8px; }
+.demo-link-notice { position: fixed; z-index: 260; bottom: 24px; left: 50%; transform: translateX(-50%); background: #24312b; border: 1px solid #566c60; border-radius: 8px; padding: 12px 17px; font: 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #e1ece5; box-shadow: 0 8px 30px #0005; }
+.demo-link-notice[hidden] { display: none; }
+@media(max-width: 600px) { .demo-badge { gap: 5px; font-size: 8px; } }

@@ -7,3 +7,5 @@ output/
 .env
 .env.*
 !.env.example
+gh.pat
+tdeck.pat

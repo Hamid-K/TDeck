@@ -2,7 +2,7 @@
 
 ## Completed
 
-- `npm run check`: TypeScript, all **112 tests**, and production build pass. `npm run pack` creates `release/tdeck-0.1.0.zip`; archive entries verified.
+- `npm run check`: TypeScript, all **116 tests**, and production build pass. `npm run pack` creates `release/tdeck-0.1.0.zip`; archive entries verified.
 - Existing Brave profile is signed in to X.
 - Production extension loaded into Brave from `dist`, using the existing signed-in profile.
 - Real keyword, account, and private-list columns populate with actual posts and engagement counts.
@@ -16,6 +16,7 @@
 - Older account pagination adds posts while neighboring columns stay in place. The account cache grew from 6 to 9 posts during the check, without source errors or dashboard focus changes.
 - Source-window diagnostics confirmed a normal, unfocused window. The dashboard stayed focused throughout source rotation and pagination.
 - Temporary DOM diagnostics removed from the shipped code.
+- README screenshot captured from the actual dashboard in Brave at a 1440×900 CSS viewport (2× resolution), using only fictional posts and bundled demo artwork. The page-only PNG excludes browser chrome and account data. Demo assets load locally, its state stays in page-local memory, and its code is excluded from the extension build.
 - Source-parser, core-state, mounted UI, and background-worker tests cover untrusted extraction, source ownership, navigation identity, partial pagination failures, list discovery/selection, local validation, automatic insertion and pixel-offset reading-position preservation.
 
 ## Live findings addressed during development

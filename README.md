@@ -2,6 +2,10 @@
 
 A focused, locally stored multi-column workspace for X. Made for Chrome and Brave with Manifest V3.
 
+![TDeck dashboard with search, account, and list columns using fictional demo content](docs/images/tdeck-demo.png)
+
+*The screenshot shows the actual dashboard with fictional accounts and posts. The demo does not connect to X.*
+
 ## Install
 
 1. Run `npm ci` and `npm run build` (Node.js 22 or later).
@@ -61,6 +65,8 @@ npm run pack
 ```
 
 `preview` runs the dashboard at a local development URL in clearly labeled preview mode. It can exercise layout and configuration; it does not connect to the signed-in X session. The production build is `dist/`; `pack` also creates a ZIP in `release/` for unpacked installation or store submission preparation.
+
+For the populated, privacy-safe screenshot demo, run `npm run preview` and open `http://127.0.0.1:5173/demo.html`. Its in-memory sample data is isolated from your saved workspace and account. Demo code is not included in the extension build.
 
 The test suite covers untrusted DOM extraction, quote nesting, authentication/error states, bounded scrolling, settings validation, feed merging, source ownership, persistence, and background-worker races. Browser acceptance results and any remaining limitations are recorded in [VERIFICATION.md](VERIFICATION.md).
 
