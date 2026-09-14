@@ -4,6 +4,7 @@
 - Use Git to track source, configuration, documentation, and tests. Keep dependencies, generated builds, release archives, local credentials, and browser account data out of commits.
 - Preserve unrelated user changes. Keep commits focused, and never force-push or rewrite published history without an explicit request.
 - Run `npm run check` before publishing implementation changes. Record live browser checks and untested boundaries accurately in `VERIFICATION.md`.
+- Publish versioned GitHub releases with the production extension ZIP, SHA-256 checksum, and concise notes. Keep package and manifest versions aligned, verify archive contents, and verify uploaded assets before handoff.
 - Use synthetic accounts, lists, and posts in test fixtures; do not commit data copied from a signed-in account.
 - Keep optional AI Recap work separate from core maintenance. It remains disabled until the provider and data-sharing policy are agreed with the user.
 

@@ -8,6 +8,10 @@ A focused, locally stored multi-column workspace for X. Made for Chrome and Brav
 
 ## Install
 
+Download `tdeck-0.1.0.zip` from the [latest release](https://github.com/Hamid-K/TDeck/releases/latest), extract it to a permanent folder, and load that folder with **Load unpacked** on `brave://extensions` or `chrome://extensions` (enable **Developer mode** first). Then open TDeck, sign in to X in the same browser profile, and click **Connect X**. Use the attached extension ZIP, not GitHub's automatically generated source-code archive.
+
+To build from source instead:
+
 1. Run `npm ci` and `npm run build` (Node.js 22 or later).
 2. Open `brave://extensions` or `chrome://extensions` and enable **Developer mode**.
 3. Choose **Load unpacked** and select this project's `dist` folder.
